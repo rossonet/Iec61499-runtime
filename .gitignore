@@ -24,3 +24,5 @@ file_list.txt
 *.a
 /src/forte
 /src/src
+
+open62541/build
