@@ -1,0 +1,33 @@
+name: Build CMake IEC61499 Runtime
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    
+    - uses: actions/checkout@v2
+    
+    - name: Clone sub repos
+      run: |
+        git submodule init
+        git submodule update
+        
+    - name: Build open62541
+      run: ./setup_open62541.sh
+
+    - name: Setup Posix Build
+      run: ./setup_posix.sh
+
+    - name: Build
+      run: cd bin/posix && make
+        
+
+      
