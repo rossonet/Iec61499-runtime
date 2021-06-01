@@ -1,3 +1,5 @@
+[![Build CMake IEC61499 Runtime](https://github.com/rossonet/Iec61499-runtime/actions/workflows/cmake_posix.yml/badge.svg)](https://github.com/rossonet/Iec61499-runtime/actions/workflows/cmake_posix.yml)
+
 # Building 4DIAC Forte
 
 ## Standard POSIX build
@@ -19,4 +21,5 @@ files:
 For building local RPMs you can use (tito)[https://github.com/dgoodwin/tito]
 
     tito build --test --rpm
+
 
